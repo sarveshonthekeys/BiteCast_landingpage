@@ -13,19 +13,8 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
-              B
-            </div>
-            <span className="font-heading font-bold text-xl tracking-tight">BiteCast</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#features" className="hover:text-primary transition-colors">Features</a>
-            <a href="#how-it-works" className="hover:text-primary transition-colors">How it works</a>
-            <a href="#mission" className="hover:text-primary transition-colors">Mission</a>
-          </div>
-          <Button onClick={scrollToDownload} size="sm" className="hidden md:flex font-semibold">
+        <div className="container mx-auto px-6 h-16 flex items-center justify-end">
+          <Button onClick={scrollToDownload} size="sm" className="font-semibold">
             Get the App
           </Button>
         </div>
@@ -52,19 +41,22 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
-                  <Sparkles className="w-3 h-3" />
-                  <span>AI-Powered Discovery</span>
+                <div className="mb-6">
+                  <span className="text-6xl md:text-8xl lg:text-9xl font-bold font-heading tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary to-secondary opacity-20 absolute -top-10 -left-4 select-none">
+                    BiteCast
+                  </span>
+                  <span className="text-4xl md:text-5xl font-bold font-heading tracking-tight text-primary relative z-10">
+                    BiteCast
+                  </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
-                  Stop Scrolling. <br />
+                  Self Improvement: <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                    Start Learning.
+                    One Swipe at a Time.
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                  BiteCast transforms hour-long podcasts into 1-minute power clips. 
-                  Find the signal in the noise and dive deep only when it matters.
+                  BiteCast is a distraction free platform hosting short form self clips of your favourite podcasts.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -161,7 +153,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">The Antidote to Doomscrolling</h2>
             <p className="text-muted-foreground text-lg">
-              Most podcast apps are designed for storage. BiteCast is designed for <span className="text-primary font-medium">discovery</span>.
+              Cultivate your mind in a sanctuary of focused wisdom—zero distractions, pure growth.
             </p>
           </div>
 
@@ -230,10 +222,7 @@ export default function Home() {
       <footer className="py-12 border-t border-white/5 bg-background">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xs font-bold">
-              B
-            </div>
-            <span className="font-heading font-bold text-lg">BiteCast</span>
+            <span className="font-heading font-bold text-lg text-primary">BiteCast</span>
           </div>
           <div className="text-sm text-muted-foreground">
             © 2024 BiteCast Inc. Meaningful consumption.
