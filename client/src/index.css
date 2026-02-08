@@ -72,10 +72,19 @@ body {
   @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-primary-foreground;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  overflow: -moz-scrollbars-none;
 }
 
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {

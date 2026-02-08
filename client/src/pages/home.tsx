@@ -147,9 +147,6 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">The Antidote to Doomscrolling</h2>
-            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
-              <span className="text-primary text-sm font-semibold tracking-wide uppercase">Our Vision</span>
-            </div>
             <p className="text-muted-foreground text-lg leading-relaxed">
               We're building a focused sanctuary for growth—a distraction-free home for high-impact, short-form wisdom.
             </p>
