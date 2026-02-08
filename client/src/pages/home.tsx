@@ -166,7 +166,7 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">Ready for a better diet?</h2>
+              <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">Improve your content consumption</h2>
               <p className="text-xl text-muted-foreground mb-10">
                 Join thousands of listeners who switched from endless scrolling to meaningful learning.
               </p>
