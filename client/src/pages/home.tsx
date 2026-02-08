@@ -151,24 +151,6 @@ export default function Home() {
               We're building a focused sanctuary for growth—a distraction-free home for high-impact, short-form wisdom.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <FeatureCard 
-              icon={<Clock className="w-8 h-8 text-primary" />}
-              title="1-Minute Power Clips"
-              description="AI extracts the core insights, stories, and jokes so you get the value without the fluff."
-            />
-            <FeatureCard 
-              icon={<Sparkles className="w-8 h-8 text-secondary" />}
-              title="Smart Curation"
-              description="Your feed learns what sparks your curiosity. Philosophy, Tech, Comedy - served fresh daily."
-            />
-            <FeatureCard 
-              icon={<ArrowRight className="w-8 h-8 text-blue-400" />}
-              title="Bridge to Full Episodes"
-              description="Loved a clip? One tap takes you to the full episode at that exact timestamp. Seamless."
-            />
-          </div>
         </div>
       </section>
 
@@ -233,16 +215,3 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-  return (
-    <div className="p-8 rounded-2xl bg-background border border-white/5 hover:border-primary/50 transition-colors group">
-      <div className="mb-6 bg-card w-16 h-16 rounded-xl flex items-center justify-center border border-white/5 group-hover:scale-110 transition-transform duration-300">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold font-heading mb-3">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed">
-        {description}
-      </p>
-    </div>
-  );
-}
