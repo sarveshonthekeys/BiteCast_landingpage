@@ -13,7 +13,10 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-end">
+        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="font-heading font-bold text-xl text-primary tracking-tighter">BiteCast</span>
+          </div>
           <Button onClick={scrollToDownload} size="sm" className="font-semibold">
             Get the App
           </Button>
@@ -21,7 +24,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Gradient/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/90 z-10" />
@@ -34,26 +37,21 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-30">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="flex-1 text-center md:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="mb-6">
-                  <span className="text-4xl md:text-5xl font-bold font-heading tracking-tight text-primary">
-                    BiteCast
-                  </span>
-                </div>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-4">
                   Self Improvement: <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                     One Swipe at a Time.
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                  BiteCast is a distraction free platform hosting short form self clips of your favourite podcasts.
+                <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                  BiteCast is a distraction-free platform hosting short-form self-improvement clips of your favorite podcasts.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -145,16 +143,19 @@ export default function Home() {
       </section>
 
       {/* Value Proposition */}
-      <section id="features" className="py-24 bg-card/30 border-y border-white/5">
+      <section id="features" className="py-16 bg-card/30 border-y border-white/5">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">The Antidote to Doomscrolling</h2>
-            <p className="text-muted-foreground text-lg">
-              Cultivate your mind in a sanctuary of focused wisdom—zero distractions, pure growth.
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">The Antidote to Doomscrolling</h2>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
+              <span className="text-primary text-sm font-semibold tracking-wide uppercase">Our Vision</span>
+            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              We're building a focused sanctuary for growth—a distraction-free home for high-impact, short-form wisdom.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             <FeatureCard 
               icon={<Clock className="w-8 h-8 text-primary" />}
               title="1-Minute Power Clips"
@@ -175,9 +176,9 @@ export default function Home() {
       </section>
 
       {/* App Download CTA */}
-      <section id="download" className="py-24 relative overflow-hidden">
+      <section id="download" className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-3xl p-12 md:p-20 text-center overflow-hidden relative">
+          <div className="bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-3xl p-10 md:p-16 text-center overflow-hidden relative">
             
             {/* Background Mesh */}
             <div className="absolute inset-0 opacity-30">
