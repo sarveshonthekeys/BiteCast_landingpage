@@ -42,10 +42,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="mb-6">
-                  <span className="text-6xl md:text-8xl lg:text-9xl font-bold font-heading tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary to-secondary opacity-20 absolute -top-10 -left-4 select-none">
-                    BiteCast
-                  </span>
-                  <span className="text-4xl md:text-5xl font-bold font-heading tracking-tight text-primary relative z-10">
+                  <span className="text-4xl md:text-5xl font-bold font-heading tracking-tight text-primary">
                     BiteCast
                   </span>
                 </div>
