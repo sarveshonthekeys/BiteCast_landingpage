@@ -24,7 +24,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-4 md:pt-16 md:pb-8 overflow-hidden">
+      <section className="relative pt-24 pb-4 md:pt-32 md:pb-8 overflow-hidden">
         {/* Background Gradient/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/90 z-10" />
