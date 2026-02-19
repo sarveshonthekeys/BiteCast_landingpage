@@ -99,7 +99,7 @@ export default function Home() {
 
                     {/* Main Content */}
                     <div className="flex-1 flex flex-col justify-end p-5 z-20 pb-16">
-                      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 mb-4">
+                      <div className="p-4 mb-4">
                          <div className="flex items-center gap-3 mb-3">
                            <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
                              <Headphones className="w-5 h-5 text-white" />
@@ -161,10 +161,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors"
+                className="p-8 border-l border-white/5 hover:border-white/20 transition-colors"
               >
                 <feature.icon className="w-8 h-8 text-white mb-6" />
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-3 tracking-tight">{feature.title}</h3>
                 <p className="text-white/40 font-light leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
@@ -175,7 +175,7 @@ export default function Home() {
       {/* Download Section */}
       <section id="download" className="py-24 relative overflow-hidden bg-black">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="bg-[#0a0a0a] border border-white/5 rounded-[2.5rem] p-12 md:p-20 text-center overflow-hidden relative">
+          <div className="border-y border-white/5 py-24 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
               <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
               <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter">JOIN THE BETA.</h2>
@@ -205,10 +205,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
-            {/* Subtle glow elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.02] blur-[100px] rounded-full" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/[0.01] blur-[100px] rounded-full" />
           </div>
         </div>
       </section>
