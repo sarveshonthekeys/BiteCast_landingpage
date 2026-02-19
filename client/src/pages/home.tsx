@@ -185,7 +185,7 @@ export default function Home() {
                   <Download className="mr-3 h-5 w-5" />
                   Download Android APK
                 </Button>
-                <p className="text-xs text-muted-foreground">Version 1.0.2 • Free Beta Access</p>
+                <p className="text-xs text-muted-foreground">Version 1.0.0 • Free Beta Access</p>
               </div>
             </div>
           </div>
@@ -199,12 +199,10 @@ export default function Home() {
             <span className="font-heading font-bold text-base text-primary">BiteCast</span>
           </div>
           <div className="text-xs text-muted-foreground">
-            © 2024 BiteCast Inc. Meaningful consumption.
+            © 2026 BiteCast social pvt ltd.
           </div>
           <div className="flex gap-4 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="hover:text-primary transition-colors">Contact</a>
+            <a href="mailto:bitecastpvtltd@gmail.com" className="hover:text-primary transition-colors">bitecastpvtltd@gmail.com</a>
           </div>
         </div>
       </footer>
