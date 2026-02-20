@@ -161,11 +161,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 border-l border-white/5 hover:border-white/20 transition-colors"
+                className="py-12 border-t border-white/5 first:border-t-0 md:border-t-0 md:border-l md:first:border-l-0 md:px-12 first:pl-0 transition-colors group"
               >
-                <feature.icon className="w-8 h-8 text-white mb-6" />
-                <h3 className="text-xl font-bold mb-3 tracking-tight">{feature.title}</h3>
-                <p className="text-white/40 font-light leading-relaxed">{feature.desc}</p>
+                <feature.icon className="w-8 h-8 text-white/20 group-hover:text-white mb-8 transition-colors duration-500" />
+                <h3 className="text-2xl font-bold mb-4 tracking-tighter uppercase">{feature.title}</h3>
+                <p className="text-white/30 font-light leading-relaxed max-w-xs group-hover:text-white/50 transition-colors duration-500">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
