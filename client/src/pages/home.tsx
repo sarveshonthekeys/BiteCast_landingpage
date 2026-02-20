@@ -5,6 +5,11 @@ import logoPng from "@assets/Gemini_Generated_Image_ngi7gdngi7gdngi7-removebg-pr
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const scrollToDownload = () => {
+    const element = document.getElementById("download");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navigation */}
@@ -14,6 +19,9 @@ export default function Home() {
             <img src={logoPng} alt="BiteCast Logo" className="h-8 w-8 object-contain" />
             <span className="font-heading font-bold text-xl text-white tracking-tighter">BiteCast</span>
           </div>
+          <Button onClick={scrollToDownload} size="sm" variant="outline" className="font-semibold border-white/10 hover:bg-white/5" data-testid="button-get-app">
+            Get the App
+          </Button>
         </div>
       </nav>
 
@@ -54,18 +62,10 @@ export default function Home() {
                   <Button 
                     size="lg" 
                     className="w-full sm:w-auto text-base font-bold h-14 px-10 bg-white text-black hover:bg-white/90"
-                    data-testid="button-download-apk"
-                    onClick={() => {
-                      const link = document.createElement('a');
-                      link.href = '/bitecast-beta.apk';
-                      link.download = 'bitecast-beta.apk';
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
+                    data-testid="button-hero-cta"
+                    onClick={scrollToDownload}
                   >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download APK
+                    Get Early Access
                   </Button>
                   <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-10 border-white/10 hover:bg-white/5 text-white/80" data-testid="button-view-demo">
                     View Demo <ArrowRight className="ml-2 h-4 w-4" />
@@ -141,6 +141,44 @@ export default function Home() {
               
               {/* Subtle glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[80%] bg-white/5 blur-[120px] -z-10 rounded-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Beta Section */}
+      <section id="download" className="py-24 relative overflow-hidden bg-black">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="border-y border-white/5 py-24 text-center overflow-hidden relative">
+            <div className="relative z-10 max-w-2xl mx-auto">
+              <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
+              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter">JOIN THE BETA.</h2>
+              <p className="text-white/40 mb-12 text-lg font-light leading-relaxed">
+                Be among the first to experience a cleaner, faster, and more productive way to consume content.
+              </p>
+              
+              <div className="flex flex-col items-center gap-6">
+                <Button 
+                  size="lg" 
+                  className="h-16 px-12 text-lg w-full sm:w-auto bg-white text-black hover:bg-white/90 rounded-full font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+                  data-testid="button-download-android"
+                  onClick={() => {
+                     const link = document.createElement('a');
+                     link.href = '/bitecast-beta.apk';
+                     link.download = 'bitecast-beta.apk';
+                     document.body.appendChild(link);
+                     link.click();
+                     document.body.removeChild(link);
+                  }}
+                >
+                  <Download className="mr-3 h-6 w-6" />
+                  Download for Android
+                </Button>
+                <div className="flex flex-col gap-1">
+                  <p className="text-xs text-white/30 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
+                  <p className="text-[10px] text-white/20">© 2026 BiteCast Social Pvt Ltd.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
