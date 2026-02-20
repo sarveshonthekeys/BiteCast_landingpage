@@ -1,15 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Headphones, Sparkles, Clock, Smartphone, Play, Pause, SkipForward } from "lucide-react";
+import { ArrowRight, Download, Headphones, Sparkles, Play, SkipForward } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
 import logoPng from "@assets/Gemini_Generated_Image_ngi7gdngi7gdngi7-removebg-preview_1771536040539.png";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  const scrollToDownload = () => {
-    const element = document.getElementById("download");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navigation */}
@@ -19,9 +14,6 @@ export default function Home() {
             <img src={logoPng} alt="BiteCast Logo" className="h-8 w-8 object-contain" />
             <span className="font-heading font-bold text-xl text-white tracking-tighter">BiteCast</span>
           </div>
-          <Button onClick={scrollToDownload} size="sm" variant="outline" className="font-semibold border-white/10 hover:bg-white/5">
-            Get the App
-          </Button>
         </div>
       </nav>
 
@@ -62,12 +54,20 @@ export default function Home() {
                   <Button 
                     size="lg" 
                     className="w-full sm:w-auto text-base font-bold h-14 px-10 bg-white text-black hover:bg-white/90"
-                    onClick={scrollToDownload}
+                    data-testid="button-download-apk"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/bitecast-beta.apk';
+                      link.download = 'bitecast-beta.apk';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                   >
                     <Download className="mr-2 h-5 w-5" />
                     Download APK
                   </Button>
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-10 border-white/10 hover:bg-white/5 text-white/80">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-10 border-white/10 hover:bg-white/5 text-white/80" data-testid="button-view-demo">
                     View Demo <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -119,13 +119,13 @@ export default function Home() {
 
                       {/* Controls */}
                       <div className="flex items-center justify-between px-2">
-                        <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full text-white/30 hover:text-white hover:bg-white/5">
+                        <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full text-white/30 hover:text-white hover:bg-white/5" data-testid="button-mock-prev">
                           <SkipForward className="w-5 h-5 rotate-180" />
                         </Button>
-                        <Button size="icon" className="h-14 w-14 rounded-full bg-white text-black hover:scale-105 transition-transform">
+                        <Button size="icon" className="h-14 w-14 rounded-full bg-white text-black hover:scale-105 transition-transform" data-testid="button-mock-play">
                            <Play className="w-7 h-7 fill-black ml-1" />
                         </Button>
-                         <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full text-white/30 hover:text-white hover:bg-white/5">
+                         <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full text-white/30 hover:text-white hover:bg-white/5" data-testid="button-mock-next">
                           <SkipForward className="w-5 h-5" />
                         </Button>
                       </div>
@@ -146,69 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Prop */}
-      <section id="features" className="py-24 bg-black">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { icon: Sparkles, title: "Curated Growth", desc: "Hand-picked insights from world-class thinkers." },
-              { icon: Clock, title: "Time Efficient", desc: "Get the value of a 3-hour podcast in 60 seconds." },
-              { icon: Smartphone, title: "Native Mobile", desc: "Designed specifically for the mobile-first swipe experience." }
-            ].map((feature, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="py-12 border-t border-white/5 first:border-t-0 md:border-t-0 md:border-l md:first:border-l-0 md:px-12 first:pl-0 transition-colors group"
-              >
-                <feature.icon className="w-8 h-8 text-white/20 group-hover:text-white mb-8 transition-colors duration-500" />
-                <h3 className="text-2xl font-bold mb-4 tracking-tighter uppercase">{feature.title}</h3>
-                <p className="text-white/30 font-light leading-relaxed max-w-xs group-hover:text-white/50 transition-colors duration-500">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section id="download" className="py-24 relative overflow-hidden bg-black">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="border-y border-white/5 py-24 text-center overflow-hidden relative">
-            <div className="relative z-10 max-w-2xl mx-auto">
-              <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter">JOIN THE BETA.</h2>
-              <p className="text-white/40 mb-12 text-lg font-light leading-relaxed">
-                Be among the first to experience a cleaner, faster, and more productive way to consume content.
-              </p>
-              
-              <div className="flex flex-col items-center gap-6">
-                <Button 
-                  size="lg" 
-                  className="h-16 px-12 text-lg w-full sm:w-auto bg-white text-black hover:bg-white/90 rounded-full font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)]"
-                  onClick={() => {
-                     const link = document.createElement('a');
-                     link.href = '/bitecast-beta.apk';
-                     link.download = 'bitecast-beta.apk';
-                     document.body.appendChild(link);
-                     link.click();
-                     document.body.removeChild(link);
-                  }}
-                >
-                  <Download className="mr-3 h-6 w-6" />
-                  Download for Android
-                </Button>
-                <div className="flex flex-col gap-1">
-                  <p className="text-xs text-white/30 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
-                  <p className="text-[10px] text-white/20">© 2026 BiteCast Social Pvt Ltd.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-black">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
@@ -217,9 +154,9 @@ export default function Home() {
             <span className="font-heading font-bold text-lg text-white/50 tracking-tighter">BiteCast</span>
           </div>
           <div className="flex gap-10 text-xs font-bold tracking-widest text-white/30 uppercase">
-             <a href="mailto:bitecastpvtltd@gmail.com" className="hover:text-white transition-colors">Contact</a>
-             <a href="#" className="hover:text-white transition-colors">Privacy</a>
-             <a href="#" className="hover:text-white transition-colors">Terms</a>
+             <a href="mailto:bitecastpvtltd@gmail.com" className="hover:text-white transition-colors" data-testid="link-contact">Contact</a>
+             <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy</a>
+             <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">Terms</a>
           </div>
         </div>
       </footer>
