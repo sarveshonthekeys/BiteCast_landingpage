@@ -151,10 +151,7 @@ export default function Home() {
           <div className="border-y border-white/5 py-24 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
               <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter">JOIN THE BETA.</h2>
-              <p className="text-white/40 mb-12 text-lg font-light leading-relaxed">
-                Be among the first to experience a cleaner, faster, and more productive way to consume content.
-              </p>
+              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter uppercase">improve your content consumption habits</h2>
               
               <div className="flex flex-col items-center gap-6">
                 <Button 
