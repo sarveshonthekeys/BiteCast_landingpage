@@ -20,7 +20,7 @@ export default function Home() {
             <span className="font-heading font-bold text-xl text-white tracking-tighter">BiteCast</span>
           </div>
           <Button onClick={scrollToDownload} size="sm" variant="outline" className="font-semibold border-white/10 hover:bg-white/5" data-testid="button-get-app">
-            Get the App
+            Get Beta
           </Button>
         </div>
       </nav>
@@ -48,14 +48,14 @@ export default function Home() {
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60 mb-6">
                   <Sparkles className="w-3 h-3" />
-                  <span>The Future of Content Consumption</span>
+                  <span>The antidote to doomscrolling</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter uppercase">
-                  self improvement <br />
-                  <span className="text-white/40">one swipe at a time.</span>
+                  improve your content <br />
+                  <span className="text-white/40">consumption habits.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/50 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
-                  BiteCast is a distraction free platform hosting short form self improvement clips of your favourite podcasts
+                  Our vision is to create a platform which bridges the gap between positive thoughts and mindful actions by providing self improvement content
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -64,7 +64,7 @@ export default function Home() {
                     data-testid="button-hero-cta"
                     onClick={scrollToDownload}
                   >
-                    Get Early Access
+                    Get Beta
                   </Button>
                   <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-10 border-white/10 hover:bg-white/5 text-white/80" data-testid="button-view-demo">
                     View Demo <ArrowRight className="ml-2 h-4 w-4" />
@@ -168,7 +168,7 @@ export default function Home() {
                   }}
                 >
                   <Download className="mr-3 h-6 w-6" />
-                  Download for Android
+                  Get Beta
                 </Button>
                 <div className="flex flex-col gap-1">
                   <p className="text-xs text-white/30 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/5 bg-black">
+      <footer className="py-12 bg-black">
         <div className="container mx-auto px-6 flex flex-col items-center gap-6">
           <div className="flex items-center gap-3">
             <img src={logoPng} alt="BiteCast" className="h-6 w-6 object-contain opacity-50" />
