@@ -51,11 +51,11 @@ export default function Home() {
                   <span>The antidote to doomscrolling</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter uppercase">
-                  improve your content <br />
-                  <span className="text-white/40">consumption habits.</span>
+                  BiteCast is a <br />
+                  <span className="text-white/40">distraction free platform.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/50 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
-                  Our vision is to create a platform which bridges the gap between positive thoughts and mindful actions by providing self improvement content
+                  providing short form self improvement clips of your favourite podcasts.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -143,14 +143,19 @@ export default function Home() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="download" className="py-12 relative overflow-hidden bg-black">
+      <section id="download" className="py-0 relative overflow-hidden bg-black">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="border-y border-white/5 py-12 text-center overflow-hidden relative">
+          <div className="border-y border-white/5 py-8 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
-              <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
-              <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter uppercase">improve your content consumption habits</h2>
+              <div className="mb-6">
+                <p className="text-sm text-white/60 mb-2 font-medium uppercase tracking-widest">The antidote to doomscrolling</p>
+                <p className="text-xs text-white/40 max-w-md mx-auto leading-relaxed">
+                  Our vision is to create a platform which bridges the gap between positive thoughts and mindful actions by providing self improvement content
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold font-sans mb-6 tracking-tight lowercase opacity-90">self improvement one swipe at a time</h2>
               
-              <div className="flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-4">
                 <Button 
                   size="lg" 
                   className="h-16 px-12 text-lg w-full sm:w-auto bg-white text-black hover:bg-white/90 rounded-full font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)]"
@@ -168,7 +173,7 @@ export default function Home() {
                   Get Beta
                 </Button>
                 <div className="flex flex-col gap-1">
-                  <p className="text-xs text-white/30 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
+                  <p className="text-[10px] text-white/20 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
                 </div>
               </div>
             </div>
@@ -177,8 +182,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-black">
-        <div className="container mx-auto px-6 flex flex-col items-center gap-6">
+      <footer className="py-6 bg-black">
+        <div className="container mx-auto px-6 flex flex-col items-center gap-4">
           <div className="flex items-center gap-3">
             <img src={logoPng} alt="BiteCast" className="h-6 w-6 object-contain opacity-50" />
             <span className="font-heading font-bold text-lg text-white/50 tracking-tighter">BiteCast</span>
