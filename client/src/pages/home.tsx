@@ -26,7 +26,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 md:pt-40 md:pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-8 md:pt-32 md:pb-12 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/40 z-10" />
@@ -65,9 +65,6 @@ export default function Home() {
                     onClick={scrollToDownload}
                   >
                     Get Beta
-                  </Button>
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-10 border-white/10 hover:bg-white/5 text-white/80" data-testid="button-view-demo">
-                    View Demo <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </motion.div>
@@ -146,9 +143,9 @@ export default function Home() {
       </section>
 
       {/* Join Beta Section */}
-      <section id="download" className="py-24 relative overflow-hidden bg-black">
+      <section id="download" className="py-12 relative overflow-hidden bg-black">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="border-y border-white/5 py-24 text-center overflow-hidden relative">
+          <div className="border-y border-white/5 py-12 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
               <img src={logoPng} alt="Logo" className="w-16 h-16 mx-auto mb-8 grayscale invert opacity-80" />
               <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter uppercase">improve your content consumption habits</h2>
