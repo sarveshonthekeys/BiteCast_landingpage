@@ -176,7 +176,6 @@ export default function Home() {
                 </Button>
                 <div className="flex flex-col gap-1">
                   <p className="text-xs text-white/30 tracking-widest uppercase font-bold">Version 1.0.0 (BETA)</p>
-                  <p className="text-[10px] text-white/20">© 2026 BiteCast Social Pvt Ltd.</p>
                 </div>
               </div>
             </div>
@@ -186,16 +185,21 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-black">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="container mx-auto px-6 flex flex-col items-center gap-6">
           <div className="flex items-center gap-3">
             <img src={logoPng} alt="BiteCast" className="h-6 w-6 object-contain opacity-50" />
             <span className="font-heading font-bold text-lg text-white/50 tracking-tighter">BiteCast</span>
           </div>
-          <div className="flex gap-10 text-xs font-bold tracking-widest text-white/30 uppercase">
-             <a href="mailto:bitecastpvtltd@gmail.com" className="hover:text-white transition-colors" data-testid="link-contact">Contact</a>
-             <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy</a>
-             <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">Terms</a>
-          </div>
+          <a 
+            href="mailto:bitecastpctltd@gmail.com" 
+            className="text-sm font-medium text-white/30 hover:text-white transition-colors"
+            data-testid="link-contact-email"
+          >
+            bitecastpctltd@gmail.com
+          </a>
+          <p className="text-[10px] text-white/20 tracking-widest uppercase font-bold">
+            © 2026 BiteCast Social Pvt Ltd.
+          </p>
         </div>
       </footer>
     </div>
