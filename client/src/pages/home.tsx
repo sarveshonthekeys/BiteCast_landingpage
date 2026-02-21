@@ -50,13 +50,12 @@ export default function Home() {
                   <Sparkles className="w-3 h-3" />
                   <span>The Future of Content Consumption</span>
                 </div>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter">
-                  SELF <br />
-                  IMPROVEMENT <br />
-                  <span className="text-white/40">IN SECONDS.</span>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter uppercase">
+                  self improvement <br />
+                  <span className="text-white/40">one swipe at a time.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/50 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
-                  Distraction-free short-form wisdom from your favorite podcasts. Focused, high-impact, and designed for growth.
+                  BiteCast is a distraction free platform hosting short form self improvement clips of your favourite podcasts
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -191,11 +190,11 @@ export default function Home() {
             <span className="font-heading font-bold text-lg text-white/50 tracking-tighter">BiteCast</span>
           </div>
           <a 
-            href="mailto:bitecastpctltd@gmail.com" 
+            href="mailto:bitecastpvtltd@gmail.com" 
             className="text-sm font-medium text-white/30 hover:text-white transition-colors"
             data-testid="link-contact-email"
           >
-            bitecastpctltd@gmail.com
+            bitecastpvtltd@gmail.com
           </a>
           <p className="text-[10px] text-white/20 tracking-widest uppercase font-bold">
             © 2026 BiteCast Social Pvt Ltd.
