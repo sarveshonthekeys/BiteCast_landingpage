@@ -51,11 +51,11 @@ export default function Home() {
                   <span>The antidote to doomscrolling</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter uppercase">
-                  BiteCast is a <br />
-                  <span className="text-white/40">distraction free platform.</span>
+                  Self improvement <br />
+                  <span className="text-white/40">:one swipe at a time</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/50 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
-                  providing short form self improvement clips of your favourite podcasts.
+                  BiteCast is a distraction free platform providing short form self improvement clips of your favourite podcasts.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
                   <Button 
@@ -142,18 +142,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Vision Section */}
+      <section className="py-24 relative overflow-hidden bg-black border-y border-white/5">
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold font-heading mb-8 tracking-tighter uppercase text-white">
+              The antidote to doomscrolling
+            </h2>
+            <p className="text-xl md:text-3xl text-white/60 leading-relaxed font-light italic">
+              "Our vision is to create a platform which bridges the gap between positive thoughts and mindful actions by providing self improvement content"
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Join Beta Section */}
-      <section id="download" className="py-0 relative overflow-hidden bg-black">
+      <section id="download" className="py-12 relative overflow-hidden bg-black">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="border-y border-white/5 py-8 text-center overflow-hidden relative">
+          <div className="py-8 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
-              <div className="mb-6">
-                <p className="text-sm text-white/60 mb-2 font-medium uppercase tracking-widest">The antidote to doomscrolling</p>
-                <p className="text-xs text-white/40 max-w-md mx-auto leading-relaxed">
-                  Our vision is to create a platform which bridges the gap between positive thoughts and mindful actions by providing self improvement content
-                </p>
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold font-sans mb-6 tracking-tight lowercase opacity-90">self improvement one swipe at a time</h2>
+              <h2 className="text-3xl md:text-5xl font-bold font-sans mb-8 tracking-tight lowercase opacity-90">self improvement one swipe at a time</h2>
               
               <div className="flex flex-col items-center gap-4">
                 <Button 
