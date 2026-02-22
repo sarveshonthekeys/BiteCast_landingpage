@@ -52,7 +52,7 @@ export default function Home() {
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[0.9] mb-6 tracking-tighter uppercase">
                   Self improvement <br />
-                  <span className="text-white/40">:one swipe at a time</span>
+                  <span className="text-white/40">one swipe at a time</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/50 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
                   BiteCast is a distraction free platform providing short form self improvement clips of your favourite podcasts.
@@ -167,7 +167,6 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="py-8 text-center overflow-hidden relative">
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold font-sans mb-8 tracking-tight lowercase opacity-90">self improvement one swipe at a time</h2>
               
               <div className="flex flex-col items-center gap-4">
                 <Button 
